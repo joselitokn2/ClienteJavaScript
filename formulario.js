@@ -92,7 +92,7 @@ const validateForm = () => {
                 }
             })
             .then(res => res.json())
-            .catch(error => console.error("Error:", error))
+            //.catch(error => console.error("Error:", error))
             .then(response => console.log("Success:", response.data))
             .then(data => console.log(data));
         alert("Producto añadido");

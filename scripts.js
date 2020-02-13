@@ -14,7 +14,7 @@ let cargarDatos = () => {
         .then(res => {
             res.content.forEach(element => {
                 if (!document.getElementById(`${element.producto_id}`))
-                    filaProducto += `<tr id=${element.producto_id}><td>${element.producto_id} </td> <td>${element.nombre}</td> <td>${element.descripcion}</td> <td>${element.stock}</td><td><img src='./resources/images/vector-medicines-icon.jpg'/></td> <td>${element.nombreCategoria}</td> <td>${element.precio}</td> </tr>`;
+                    filaProducto += `<tr id=${element.producto_id}><td>${element.producto_id} </td> <td>${element.nombre}</td> <td>${element.descripcion}</td> <td>${element.stock}</td><td><img src='${element.imagen}'/></td> <td>${element.nombreCategoria}</td> <td>${element.precio}</td> </tr>`;
             });
             tablaProductos.innerHTML += filaProducto;
 
