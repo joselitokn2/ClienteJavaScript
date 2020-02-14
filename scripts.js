@@ -8,7 +8,7 @@ let filaProducto = "";
 /* */
 
 let cargarDatos = () => {
-    fetch("http://localhost:9000/producto/all?size=33")
+    fetch("http://localhost:9000/producto?size=33")
         .then(res => (res.ok ? Promise.resolve(res) : Promise.reject(res)))
         .then(res => res.json())
         .then(res => {
